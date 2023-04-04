@@ -1,0 +1,132 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\scripts\tinymce\icons\default\icons.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\icons\default\icons.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\langs\README.md" />
+    <None Include="wwwroot\lib\scripts\tinymce\license.txt" />
+    <None Include="wwwroot\lib\scripts\tinymce\models\dom\model.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\models\dom\model.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\advlist\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\anchor\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\autolink\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\autoresize\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\autosave\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\charmap\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\codesample\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\codesample\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\code\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\code\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\directionality\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\emoticons\js\emojiimages.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\emoticons\js\emojiimages.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\emoticons\js\emojis.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\emoticons\js\emojis.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\emoticons\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\fullscreen\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\help\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\help\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\image\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\image\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\importcss\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\insertdatetime\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\link\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\link\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\lists\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\lists\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\media\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\media\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\nonbreaking\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\pagebreak\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\preview\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\preview\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\quickbars\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\quickbars\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\save\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\save\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\searchreplace\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\table\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\table\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\template\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\template\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\visualblocks\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\visualchars\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\wordcount\plugin.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\dark\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\dark\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\default\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\default\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\document\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\document\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\tinymce-5-dark\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\tinymce-5-dark\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\tinymce-5\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\tinymce-5\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\writer\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\content\writer\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide-dark\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide-dark\content.inline.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide-dark\content.inline.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide-dark\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide-dark\skin.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide-dark\skin.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide-dark\skin.shadowdom.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide-dark\skin.shadowdom.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide\content.inline.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide\content.inline.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide\skin.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide\skin.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide\skin.shadowdom.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\oxide\skin.shadowdom.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5-dark\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5-dark\content.inline.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5-dark\content.inline.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5-dark\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5-dark\skin.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5-dark\skin.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5-dark\skin.shadowdom.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5-dark\skin.shadowdom.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5\content.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5\content.inline.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5\content.inline.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5\content.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5\skin.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5\skin.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5\skin.shadowdom.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\skins\ui\tinymce-5\skin.shadowdom.min.css" />
+    <None Include="wwwroot\lib\scripts\tinymce\themes\silver\theme.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\themes\silver\theme.min.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\tinymce.d.ts" />
+    <None Include="wwwroot\lib\scripts\tinymce\tinymce.js" />
+    <None Include="wwwroot\lib\scripts\tinymce\tinymce.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="TinyMCE" Version="6.0.3" />
+  </ItemGroup>
+
+</Project>

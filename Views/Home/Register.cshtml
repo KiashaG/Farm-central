@@ -1,0 +1,96 @@
+﻿@model PROG7311_PART2.Models.RegisterInfo
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+@using (Html.BeginForm())
+{
+
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0;
+            font-size: large;
+            font-family: Gabriola, Geneva, Tahoma, sans-serif;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #header {
+            background-color: cornflowerblue;
+            color: #fff;
+        }
+
+        h4 {
+            font-weight: 600;
+            text-align: center;
+            background-color: cornflowerblue;
+            color: #fff;
+            padding: 10px 0px;
+        }
+
+    </style>
+
+
+
+    <div class="form-horizontal">
+        <h4>REGISTER INFORMATION</h4>
+        <p>Create a new user account to use the stock management application</p>
+        <hr />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.User_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.User_Name, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.User_Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.User_Email, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.User_Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.User_Password, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.User_Role, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.User_Role, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+       
+
+
+        <div class="form-group">
+            <input type="submit" value="Register" class="btn btn-primary" />
+        </div>
+
+
+
+        <div>
+            @Html.ActionLink("Already have an account? Login Here", "Login")
+        </div>
+    </div>
+   
+
+}

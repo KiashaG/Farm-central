@@ -1,0 +1,93 @@
+﻿@model PROG7311_PART2.Models.ProductInfoList
+@{
+    ViewData["Title"] = "ProductListIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>PRODUCT INFORMATION</h1>
+
+<p>
+    Below is where a logged‐in employee is able to view the list of all the products
+    ever supplied by a specific farmer.
+</p>
+
+<style>
+    body {
+        padding: 0px;
+        margin: 0;
+        font-size: large;
+        font-family: Gabriola, Geneva, Tahoma, sans-serif;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    tr {
+        transition: all .2s ease-in;
+        cursor: pointer;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header {
+        background-color: rebeccapurple ;
+        color: #fff;
+    }
+
+    h1 {
+        font-weight: 600;
+        text-align: center;
+        background-color: rebeccapurple;
+        color: #fff;
+        padding: 10px 0px;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+        transform: scale(1.02);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>
+@*For the display of the product List info*@
+<table class="table">
+    <thead>
+        <tr>
+        <tr id="header">
+            <th scope="col"> Product_Name</th>
+            <th scope="col"> Date_Range</th>
+            <th scope="col"> Product_Type</th>
+            <th scope="col"> Users_Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.productsList)
+        {
+            <tr>
+                <td> @product.Product_Name </td>
+                <td> @product.Date_Accquired </td>
+                <td> @product.Product_Type </td>
+                <td> @product.Users_Name </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+
+
+<div>
+    <a asp-action="FarmerIndex" class="btn btn-secondary">Back</a>
+    <a asp-action="Login" class="btn btn-dark">Log Out</a>
+</div>
+
+@*<div>
+    <a asp-action="Login" class="btn btn-dark">Log Out</a>
+</div>
+<div class="col-md-4"></div>*@
+

@@ -1,0 +1,99 @@
+﻿@model IEnumerable<PROG7311_PART2.Models.ProductInfo>
+@{
+    ViewData["Title"] = "ProductIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>FARMER INFORMATION</h1>
+
+<p>Below is where all farmer details can be viewed, new products can be created within the farmer infomation.</p>
+
+<p>
+    <a asp-action="ProductCreate" class="btn btn-secondary">Add new Product</a>
+</p>
+<style>
+    body {
+        padding: 0px;
+        margin: 0;
+        font-family: Gabriola, Geneva, Tahoma, sans-serif;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    tr {
+        transition: all .2s ease-in;
+        cursor: pointer;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header {
+        background-color: mediumpurple ;
+        color: #fff;
+    }
+
+    h1 {
+        font-weight: 600;
+        text-align: center;
+        background-color: mediumpurple ;
+        color: #fff;
+        padding: 10px 0px;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+        transform: scale(1.02);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+
+</style>
+
+@*For the display of the Product info*@
+<table class="table">
+    <tr>
+    <tr id="header">
+        <th>
+            @Html.DisplayNameFor(model => model.Product_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Accquired)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_Type)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var pro in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => pro.Product_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => pro.Date_Accquired)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => pro.Product_Type)
+            </td>
+            <td>
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    <a asp-action="Login" class="btn btn-dark">Log Out</a>
+</div>
+<div class="col-md-4"></div>

@@ -1,0 +1,116 @@
+﻿@model IEnumerable<PROG7311_PART2.Models.RegisterInfo>
+@{
+    ViewData["Title"] = "FarmerIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>EMPLOYEE INFORMATION</h1>
+
+<p>
+    Below is where employees can add new farmers, view the list of all the products
+    ever supplied by a specific farmer and filter the displayed list of
+    products supplied by a specific farmer according to the date range or type of product.
+</p>
+
+<p>
+    <a asp-action="Register" class="btn btn-secondary">Add new Farmer</a>
+</p>
+
+<style>
+    body {
+        padding: 0px;
+        margin: 0;
+        font-size: large;
+        font-family: Gabriola, Geneva, Tahoma, sans-serif;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    tr {
+        transition: all .2s ease-in;
+        cursor: pointer;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header {
+        background-color: cadetblue;
+        color: #fff;
+    }
+
+    h1 {
+        font-weight: 600;
+        text-align: center;
+        background-color: cadetblue;
+        color: #fff;
+        padding: 10px 0px;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+        transform: scale(1.02);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+@*For the display of the Farmer info*@
+<table class="table">
+    <tr>
+    <tr id="header">
+        <th>
+            @Html.DisplayNameFor(model => model.User_Name)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var farm in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => farm.User_Name)
+            </td>
+
+            <td>
+                <a asp-action="FilteredBySpecificFarmer" asp-route-id=@farm.User_Name class="btn btn-secondary">Filter</a>
+            </td>
+
+           
+        </tr>
+    }
+
+</table>
+
+
+
+<div>
+
+    <a asp-action="ProductListIndex" class="btn btn-secondary">View product list </a>
+    <a asp-action="ProductListIndex" class="btn btn-secondary">Filter the displayed product list</a>
+    <a asp-action="Login" class="btn btn-dark">Log Out</a>
+
+</div>
+
+@*<div>
+
+</div>*@
+
+@*<div>
+    <a asp-action="ProductListIndex"  class="btn btn-secondary">Filter the displayed product list</a>
+</div>*@
+
+@*<div>
+    <a asp-action="Login"  class="btn btn-dark">Log Out</a>
+</div>
+<div class="col-md-4"></div>*@
+
+
+

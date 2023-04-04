@@ -1,0 +1,202 @@
+﻿@model PROG7311_PART2.Models.ProductInfoList
+@{
+    ViewData["Title"] = "ProductListIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>PRODUCT LIST INFORMATION</h1>
+
+<p>
+    Below is where a logged‐in employee is able to view the list of all the products
+    ever supplied by a specific farmers and filter the displayed list of
+    products supplied by a specific farmer according to the date range or type of product.
+</p>
+
+<style>
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+
+    #myInputd {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+
+
+    #myTable {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+    }
+
+        #myTable th, #myTable td {
+            text-align: left;
+            padding: 12px;
+        }
+
+        #myTable tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+            #myTable tr.header, #myTable tr:hover {
+                background-color: #f1f1f1;
+            }
+
+
+    body {
+        padding: 0px;
+        margin: 0;
+        font-size: large;
+        font-family: Gabriola, Geneva, Tahoma, sans-serif;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    tr {
+        transition: all .2s ease-in;
+        cursor: pointer;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header {
+        background-color: orchid;
+        color: #fff;
+    }
+
+    h1 {
+        font-weight: 600;
+        text-align: center;
+        background-color: orchid;
+        color: #fff;
+        padding: 10px 0px;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+        transform: scale(1.02);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+@*For the display of the product List info*@
+<div class="col-6">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by product type..">
+</div>
+
+<div class="col-6">
+    <input type="text" id="myInputd" onkeyup="myFunctiond()" placeholder="Search for dates..">
+</div>
+
+
+<table id="myTable" class="table">
+    <thead>
+        <tr>
+        <tr id="header">
+            <th scope="col"> Product_Name</th>
+            <th scope="col"> Date_Range</th>
+            <th scope="col"> Product_Type</th>
+            <th scope="col"> Users_Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.productsList)
+        {
+            <tr>
+                <td> @product.Product_Name </td>
+                <td> @product.Date_Accquired </td>
+                <td> @product.Product_Type </td>
+                <td> @product.Users_Name </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<div>
+    <a asp-action="FarmerIndex" class="btn btn-secondary">Back</a>
+    <a asp-action="Login" class="btn btn-dark">Log Out</a>
+</div>
+
+<p>.</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+
+
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+    }
+
+    function myFunctiond() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInputd");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+    }
+
+
+</script>

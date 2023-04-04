@@ -1,0 +1,104 @@
+﻿@model PROG7311_PART2.Models.ProductInfo
+@{
+    ViewBag.Title = "ProductCreate";
+}
+
+
+@using (Html.BeginForm())
+{
+    <style>
+        body {
+            padding: 0px;
+            margin: 0;
+            font-family: Gabriola, Geneva, Tahoma, sans-serif;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        tr {
+            transition: all .2s ease-in;
+            cursor: pointer;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #header {
+            background-color: royalblue;
+            color: #fff;
+        }
+
+        h4 {
+            font-weight: 600;
+            text-align: center;
+            background-color: royalblue;
+            color: #fff;
+            padding: 10px 0px;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+            transform: scale(1.02);
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>ADD A NEW PRODUCT</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Product_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.Product_Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Product_Name, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date_Accquired, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Date_Accquired, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Product_Type, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+
+                @Html.EditorFor(model => model.Product_Type, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.Users_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Users_Name, new { htmlAttributes = new { @class = "form-control"} })
+            </div>
+        </div>*@
+    </div>
+
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add product" class="btn btn-secondary" />
+        <a asp-action="ProductIndex" class="btn btn-dark">Cancel</a>
+    </div>
+
+
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "ProductIndex")
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
